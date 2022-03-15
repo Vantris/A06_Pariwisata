@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Lucida Grande";
@@ -7,17 +11,22 @@ a {
   text-decoration: none;
 }
 
+.clear {
+  clear: left;
+}
+
 .container {
-  width: 1170px;
+  max-width: 1170px;
+  width: 100%;
   padding: 0 15px;
   margin: 0 auto;
 }
 
 .top-wrapper {
   padding: 180px 0 100px 0;
-  background-image: url(https://i.pinimg.com/originals/c4/85/c7/c485c71fbeb2d2456ce3250afc328c33.jpg);
+  background-image: url(headerborobudur.webp);
   background-size: cover;
-  color: white;
+  color: rgb(255, 255, 255);
   text-align: center;
 }
 
@@ -26,14 +35,21 @@ a {
   font-size: 45px;
   letter-spacing: 5px;
   margin-bottom: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #f12a2a;
 }
 
-.top-wrapper p {
+.top-wrapper h2 {
   opacity: 0.7;
-  margin-bottom: 3px;
+  font-size: 45px;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
 
 .btn-wrapper {
+  text-align: center;
   margin: 20px 0;
 }
 
@@ -41,10 +57,18 @@ a {
   margin: 10px 0;
 }
 
-.lihat {
+.signup {
   background-color: #239b76;
 }
 
+.facebook {
+  background-color: #3b5998;
+  margin-right: 10px;
+}
+
+.twitter {
+  background-color: #55acee;
+}
 
 .btn {
   padding: 12px 24px;
@@ -52,6 +76,7 @@ a {
   display: inline-block;
   opacity: 0.8;
   border-radius: 4px;
+  text-align: center;
 }
 
 .btn:hover {
@@ -62,137 +87,143 @@ a {
   margin-right: 5px;
 }
 
-/* untuk header */
 header {
-  height: 100%;
+  height: 65px;
   width: 100%;
+  background-color: rgba(12, 11, 11, 0.2);
+  position :fixed;
+  top: 0;
+  z-index: 10;
 }
 
-.menu-header{
-  background-color: rgba(34, 49, 52, 0.9);
+.logo {
+  width: 100px;
+  margin-top: 5px;
 }
 
-.menu-header ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-.menu-header > ul > li {
+.header-left {
   float: left;
 }
 
+.header-right {
+  float: right;
+  margin-right: -25px;
+}
 
-.menu-header li a {
-  display: inline-block;
+.header-right a {
+  line-height: 65px;
+  padding: 0 25px;
   color: white;
-  text-align: center;
-  padding: 16px 20px;
-  text-decoration: none;
-}
-
-.menu-header li a:hover{
-  background-color: #1f1f30;
-}
-
-li.dropdown {
-  display: inline-block;
-}
-
-.dropdown:hover .isi-dropdown {
   display: block;
+  float: left;
+  transition: all 0.5s;
 }
 
-.isi-dropdown a:hover {
-  color: #09090a; !important;
+.header-right a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
-.isi-dropdown {
-  position: absolute;
-  display: none;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  background-color: #f9f9f9;
+.menu-icon {
+  color: white;
+  float: right;
+  font-size: 25px;
+  padding: 21px 0;
+  display:none;
 }
 
-.isi-dropdown a {
-  color: #3c3c3c !important;
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+  background-image: url(garuda.png);
+  background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+background-color: #f7f7f7;
 }
 
-.isi-dropdown a:hover {
-  color: #232323 !important;
-  background: #f3f3f3 !important;
+.card h5{
+font-size: large;
 }
 
-.lesson-wrapper {
-  height: 500px;
+.destination-wrapper {
   padding-bottom: 80px;
+  padding-left: 5%;
+  padding-right: 5%;
   background-color: #f7f7f7;
+  text-align: center;
+  margin: 20px;
 }
 
 .heading {
-  padding-top: 60px;
-  padding-bottom: 30px;
-  color: #7104a8;
+  padding-top: 80px;
+  padding-bottom: 50px;
+  color: #5f5d60;
+  font-size: xx-large;
 }
 
-.heading h2 {
+.heading h3 {
   font-weight: normal;
 }
 
-.lesson {
+.destination {
   float: left;
   width: 20%;
-  margin-left: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.lesson-icon{
-  position:relative;
+.destination-icon {
+  position: relative;
+ 
 }
-
-
-.lesson-icon p{
+.destination-icon img{
+width: 200px; ;
+height: 200px;
+border-radius: 10px;
+}
+.destination-icon p {
   position: absolute;
-  top: 90px;
+  top: 44%;
   width: 100%;
-  color: white;
-  margin-left: 74px;
-  
+  color: rgb(255, 253, 253);
+  font-size: large;
 }
 
-.txt-contents{
-  width: 100%;
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 15px;
-  color: #000000;
-
+.heading h4 {
+  font-weight: normal;
 }
 
-.images .tengah img{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 300px;
-  height: 200px;
-  border: 4px solid #575D63;
-  padding: 10px;
-
+.message-wrapper {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 80px;
+  text-align: center;
 }
+
+.message {
+  padding: 15px 40px;
+  background-color: #ff0000;
+  cursor: pointer;
+  box-shadow: 0 7px #ffffff;
+}
+
+.message:active {
+  position: relative;
+  top: 7px;
+  box-shadow: none;
+}
+
 footer img {
   width: 125px;
 }
 
 footer p {
-  color: white;
-  font-size: 18px;
-  float: right;
-  font-family: "Lucida Grande";
+  color: #b3aeb5;
+  font-size: 12px;
 }
 
 footer {
   padding-top: 30px;
   padding-bottom: 20px;
-  background-color: #a04024;
 }
