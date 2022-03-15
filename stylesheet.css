@@ -180,3 +180,19 @@ li.dropdown {
   padding: 10px;
 
 }
+footer img {
+  width: 125px;
+}
+
+footer p {
+  color: white;
+  font-size: 18px;
+  float: right;
+  font-family: "Lucida Grande";
+}
+
+footer {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background-color: #a04024;
+}
